@@ -55,7 +55,7 @@ ok      github.com/arrno/benchmark-gliter       1.147s
 **100p/20ms**
 
 -   Page size: 100
--   Pages: 10
+-   Pages: 100
 -   Latency: 20ms
 
 ```

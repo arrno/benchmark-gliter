@@ -6,7 +6,7 @@ This repo is only for end-to-end benchmark testing of gliter.
 
 ## Method
 
-The test is to fetch N pages of 100 records from a database, do a arbitrary transformations on the records, then store the results back into the database.
+The test is to fetch N pages of 100 records from a database, do arbitrary transformations on the records, then store the results back into the database.
 
 There are two implementations of the Database interface:
 
@@ -132,4 +132,4 @@ store := func(data []DocBundle) ([]DocBundle, error) {
 
 If we break data into N chunks within this function, we could do N calls to `SetData` concurrently with `InParallel` to further drive down total latency.
 
-This of course will work until we hit the rate limit of our datastore.
+This of course will work until we hit the rate limit of our datastore. [A full example of this strategy is documented here.](https://github.com/arrno/gliter/blob/main/cmd/pipeline_fan_out.go)
